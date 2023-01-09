@@ -1,0 +1,78 @@
+::selection{
+    
+}
+
+body{font-family: '나눔스퀘어라운드';}
+#wrap{width: 100%;min-width:1600px;}
+#header{width: 100%;height: 50px;box-sizing:border-box;position:fixed;z-index:11;}
+
+
+#header .logo{width: 30px;height: 30px;position:absolute;top:10px;left:200px;cursor:pointer}
+#header .logo>img{width: 100%;height: 100%;}
+#header .menu-bar{width: 50px;height: 50px;position:absolute;right:200px;cursor:pointer;}
+#header .menu-bar>span{width: 50px;height: 5px;border:2px solid #fff;border-radius:10px;display:block;}
+#header .menu-bar.on>span{border:3px solid #fff}
+#header .menu-bar .line{position:absolute;margin-top:10px;transition:0.2s ease-in-out}
+#header .menu-bar .line:nth-child(1){top:0px;}
+#header .menu-bar .line:nth-child(2){top:13px;}
+#header .menu-bar .line:nth-child(3){top:26px;}
+#header .menu-bar.on .line:nth-child(1){top:13px;transform:rotate(45deg);}
+#header .menu-bar.on .line:nth-child(2){opacity:0;}
+#header .menu-bar.on .line:nth-child(3){top:13px;transform:rotate(-45deg);}
+#header .menu-bar.on:hover .line:nth-child(1){top:13px;transform:rotate(45deg);}
+#header .menu-bar.on:hover .line:nth-child(3){top:13px;transform:rotate(-45deg);}
+#header .menu-bar:hover .line:nth-child(1){top:-5px;}
+#header .menu-bar:hover .line:nth-child(3){top:31px;}
+
+
+
+#nav{width: 30%;height: 100%;position:fixed;right:-100%;background:#00223e;transition:0.5s;z-index:10;}
+#nav.on{right:0;}
+#nav>.gnb{margin-top:100px;margin-left:50px;}
+#nav>.gnb>li{margin-bottom:50px;}
+#nav>.gnb>li>a{font-size: 60px;transition:0.5s;color:#fff;font-family:'세방고딕'}
+#nav>.gnb>li:hover>a{letter-spacing:-0.1em;}
+
+
+#container{width: 100%;}
+#container .top{width: 50px;height: 50px;background:#00a2ad;position:fixed;right:200px;bottom:150px;opacity:0;transition:0.5s;z-index:5;border-radius:10px;box-shadow:5px 5px 0px #014b50}
+#container .top.on{display:block;opacity:1;cursor:pointer;bottom:100px;}
+#container .top:hover{border-radius:50%;}
+#container .top>strong{opacity:0; display:block;text-align:center;margin-top:20px;font-weight: 900;color:#014b50;transition:0.5s}
+#container .top:hover > strong{opacity:1}
+#home{height: 1080px;}
+#about{height: 1080px;}
+#web{height: 1080px;}
+#other{height: 2160px;}
+#react{height: 1080px;}
+#contact{height: 1080px;}
+
+#home{width: 100%;background-image:url(../images/bg.png);}
+#home h2{padding-top:300px;box-sizing:border-box;font-size: 100px;font-weight: 900;font-family:'세방고딕';color:#fff;text-shadow:5px 5px 5px #00223e;}
+#home p{text-align:center;margin-top:25px;color:#fff}
+#home .bookmark{position:absolute;top:50%;right:20%;;}
+#home .bookmark li {height: 50px;width: 130px;margin-bottom:35px;}
+#home .bookmark li span{opacity:0;}
+#home .bookmark li a{display:block;line-height:50px; font-size: 16
+    px;font-weight: 300;background:transparent;box-shadow:5px 5px 5px #00223e;color:#fff;text-align:center;padding-left:10px;border-radius:25px;transition:0.5s}
+#home .bookmark li:hover a{transform:translateX(50px)}
+#home .bookmark li:hover span{opacity:1;}
+#home .name{position:absolute;left:35.5%;top:55%;font-family:'세방고딕';color:#fda07f;font-style:italic;text-shadow:5px 5px 5px #00223e;}
+#home .name>strong{font-size:40px;font-weight: 900;}
+#home .name>em{font-size: 25px;position:absolute;bottom:2px;font-weight: 600;opacity:0.5;
+}
+
+#home .name>em:nth-of-type(1){left:40px;}
+#home .name>em:nth-of-type(2){left:70px;}
+#home .name>em:nth-of-type(3){left:85px;}
+#home .name>em:nth-of-type(4){left:100px;}
+
+h2{padding-top:100px;box-sizing:border-box;}
+
+/* header */
+
+.bg{display:none;opacity:0;background:rgba(0,0,0,0.5);width: 100%;height: 1080px;position:fixed;z-index:5;transition:0.5s;}
+.bg.on{display:block;opacity:1;}
+
+
+
