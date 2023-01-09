@@ -1,7 +1,9 @@
 ::selection{
     
 }
-
+@font-face{src:url("../fonts/Cafe24Behappy.ttf");font-family:"Cafe24 Behappy";}
+@font-face{src:url("../fonts/Cafe24Decobox.ttf");font-family:"Cafe24 Decobox"}
+@font-face{src:url("../fonts/Cafe24Decoline.ttf");font-family::"Cafe24 Decoline"}
 body{font-family: '나눔스퀘어라운드';}
 #wrap{width: 100%;min-width:1600px;}
 #header{width: 100%;height: 50px;box-sizing:border-box;position:fixed;z-index:11;}
