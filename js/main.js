@@ -69,7 +69,7 @@ function main_para(){
         let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
         let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
         let x = `${_depth3}, ${_depth2}, ${_depth1}`;
-        console.log(x);
+        // console.log(x);
         let size=``
         elem.style.backgroundPosition = x;
     }
@@ -93,11 +93,14 @@ function fixHeader() {
             var window = $(this).scrollTop();
             if (window>=750) {
                 $("#header").addClass("fixed", 1000);
+                
             } else {
                 $("#header").removeClass("fixed", 1000);
+                
             }
         });
 }
+
 
 function scrollbtn() {
     const $topBtn = document.querySelector(".top");

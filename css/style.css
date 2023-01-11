@@ -2,7 +2,7 @@
 @font-face{src:url("../fonts/Cafe24Behappy.ttf");font-family:"Cafe24 Behappy";}
 @font-face{src:url("../fonts/Cafe24Decobox.ttf");font-family:"Cafe24 Decobox"}
 @font-face{src:url("../fonts/Cafe24Decoline.ttf");font-family:"Cafe24 Decoline"}
-@font-face{src:url("../fonts/NanumSquareR.ttf");font-family:"나눔스퀘어";}
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 
 
 /* reset */
@@ -154,7 +154,14 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     height: 100%;
     width: 100%;
     font-size: 18px;
-    font-family:"Cafe24 decobox"
+    font-family:"Cafe24 decobox";
+    transition:0.5s;
+}
+.gnb > li:hover>a {
+    color: #42763f;;
+}
+.gnb >li.on > a{
+    color:#42763f;
 }
 #header.fixed {
     position: fixed;
@@ -171,6 +178,7 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
 #header.fixed  a {
     line-height: 60px;
 }
+
 /* main */
 
   
