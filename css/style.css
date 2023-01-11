@@ -494,14 +494,14 @@ color:#f9bb85;
     transform: translate(-50%, -50%);
     box-shadow:5px 5px 10px #333;
     overflow-y: scroll;
-    z-index: 900;
+    z-index: 1000;
 }
 .layer_bg .popup img {
     width: 100%;
     box-sizing: border-box;
 }
 .layer_bg .close {
-    z-index:900;
+    z-index:1000;
     position: fixed;
     top: 85px;
     right: 540px;
