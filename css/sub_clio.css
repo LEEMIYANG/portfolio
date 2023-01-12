@@ -1,5 +1,19 @@
-
-#wrap {font-family:'SB 어그로'}
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.cdnfonts.com/css/century-gothic');
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+#wrap {font-family: 'SBAggroB';}
 #wrap{width: 100%;padding-top:50px;box-sizing:border-box;}
 #wrap .con-box{width: 100%;}
 #wrap .con1{height:780px;}
@@ -38,9 +52,9 @@
 .con2 .guide li .font li span:nth-child(3){font-weight: 500;}
 .con2 .guide li .font li span:nth-child(4){font-weight: 300;}
 .con2 .guide li .font li span:nth-child(5){font-weight: 100;}
-.con2 .guide li .font li:nth-child(1){font-family:'Century Gothic'}
-.con2 .guide li .font li:nth-child(2){font-family:'나눔스퀘어'}
-.con2 .guide li .font li:nth-child(3){font-family:'세방고딕'}
+.con2 .guide li .font li:nth-child(1){font-family: 'Century Gothic', sans-serif;}
+.con2 .guide li .font li:nth-child(2){font-family: 'NanumSquare', sans-serif;}
+.con2 .guide li .font li:nth-child(3){font-family: 'SEBANG_Gothic_Bold';}
 .con2 .guide li ul{}
 
 .con2 .guide li .color{display:flex;}

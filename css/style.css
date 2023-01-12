@@ -2,7 +2,7 @@
 @font-face{src:url("../fonts/Cafe24Behappy.ttf");font-family:"Cafe24 Behappy";}
 @font-face{src:url("../fonts/Cafe24Decobox.ttf");font-family:"Cafe24 Decobox"}
 @font-face{src:url("../fonts/Cafe24Decoline.ttf");font-family:"Cafe24 Decoline"}
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
 strong,em,p,a,h1,h2,h3,h4,h5,h6{transform:skew(-0.001deg);}
 
 /* reset */
