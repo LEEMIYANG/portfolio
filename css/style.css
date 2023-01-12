@@ -2,8 +2,8 @@
 @font-face{src:url("../fonts/Cafe24Behappy.ttf");font-family:"Cafe24 Behappy";}
 @font-face{src:url("../fonts/Cafe24Decobox.ttf");font-family:"Cafe24 Decobox"}
 @font-face{src:url("../fonts/Cafe24Decoline.ttf");font-family:"Cafe24 Decoline"}
-@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
-
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+strong,em,p,a,h1,h2,h3,h4,h5,h6{transform:skew(-0.001deg);}
 
 /* reset */
 
@@ -72,7 +72,8 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
 #wrap{min-width:1600px;}
 ::selection{background-color:rgb(66, 118, 63,0.2);}
 .container {
-    font-family: "나눔스퀘어";z-index:15;
+    font-family: 'NanumSquare', sans-serif;
+    z-index:15;
 }
 /* top btn */
 .top.on {
@@ -106,8 +107,8 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     stroke:#0000;
     animation:rotate normal infinite 30s linear;
 }
-.top_icon{position:fixed;font-size: 30px;font-weight: 100;font: 100 22px "Josefin Sans"; bottom:120px;right:120px;}
-
+.top_icon{position:fixed;font-size: 30px;font-weight: 100;font: 100 22px "Josefin Sans"; left:50%;top:50%;transform:translate(-50%,-50%);transition:0.5s;}
+.top:hover .top_icon{font-size: 35px;}
 @keyframes rotate {
     to {
       transform: rotate(360deg);
@@ -271,13 +272,13 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
 }
 .about_box:nth-of-type(1) {
     height: 300px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px dashed #42763f;
 
 }
 .about_box:nth-of-type(2) {
     height: 300px;
     padding-top: 50px;
-    border-bottom: 2px solid #000;
+    border-bottom:2px dashed #42763f;
 }
 .about_box:nth-of-type(3) {
     height: 500px
@@ -466,13 +467,14 @@ color:#f9bb85;
     background:#fff;
 }
 
-.event_img img{transition:0.5s;}
-.event_img {
+.design_img img{transition:0.5s;}
+.design_img {
     width: 230px;
     height: 300px;
     overflow: hidden;
     transition:0.5s;
 }
+.design_img:hover img{filter:grayscale(50%);}
 
 .event_info {
     width:230px;
@@ -494,8 +496,10 @@ color:#f9bb85;
 }
 .layer_bg .popup {
     width: 700px;
-    height: 0;
-    background: #000;
+    height: 700px;
+    opacity:0;
+    background: #fff;
+    padding:10px;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -503,6 +507,7 @@ color:#f9bb85;
     box-shadow:5px 5px 10px #333;
     overflow-y: scroll;
     z-index: 1000;
+    transition:0.5s;
 }
 .layer_bg .popup img {
     width: 100%;
@@ -511,19 +516,24 @@ color:#f9bb85;
 .layer_bg .close {
     z-index:1000;
     position: fixed;
-    top: 85px;
-    right: 540px;
+    top: 380px;
+    right:473px;
+    width:50px;
+    height:50px;
     background: none;
     display: block;
     font-size: 30px;
     text-align: center;
-    line-height: 30px;
+    line-height: 50px;
     color: #fff;
+    background:black;
     font-weight:900;
     cursor: pointer;
+    transition:0.5s;
 }
 .layer_bg .close:hover{
-    color:#000;
+    font-size: 25px;
+    color:#999;
 }
 .popup::-webkit-scrollbar {
     width: 10px;
@@ -539,35 +549,11 @@ color:#f9bb85;
     text-align:center;
     margin-top:20px;
     font-size: 12px; 
-    color:#999;}
-.design_banner {
-    width: 500px;
-    height: 53px;
-    overflow: hidden;
-    position: relative;
-    margin:auto;
-    
-    box-shadow:5px 5px 15px #000;
+    color:#999;
 }
-.banner_work {
-    width: 500px;
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%);
-}
-.banner_work:nth-child(1) {
-    top: 0;
-    animation: ban_rolling1 5s linear infinite;
-}
-.banner_work:nth-child(2) {
-    top: 0;
-    animation: ban_rolling2 5s linear infinite;
-}
-.banner_work:nth-child(3) {
-    top: 0;
-    animation: ban_rolling3 5s linear infinite;
-}
+
+.banner_work .design_img{box-sizing:border-box;width:33.3%;float:left;padding:5px;cursor:pointer;}
+
 @keyframes ban_rolling1 {
     0% {
         top: 0;
@@ -680,7 +666,7 @@ color:#f9bb85;
     height: 35px;
     font-size: 14px;
     padding-left:10px;
-    font-family:"나눔스퀘어";
+    font-family: 'NanumSquare', sans-serif;
     border:1px solid rgba(230,110,44,0.6);
 }
 #contact input::placeholder,textarea::placeholder{

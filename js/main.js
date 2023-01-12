@@ -1,61 +1,18 @@
 $(function () {
     
+    main_para();
+    mainjs();
+    webhover();
     fixHeader();
-    WebGuide();
     DesignModal();
     otherbtn();
     scrollbtn();
     skill();
-    webhover();
-    mainjs();
-    main_para();
     design_work();
     Contact();
     
 });
 
-function WebGuide(){
-
-    
-}
-function design_work(){
-    var limits = 15.0;
-
-    $(".event_work").mousemove(function (e) {
-    var rect = e.target.getBoundingClientRect();
-    var x = e.clientX - rect.left; //x position within the element.
-    var y = e.clientY - rect.top; //y position within the element.
-    var offsetX = x / rect.width;
-    var offsetY = y / rect.height;
-
-    var rotateY = (offsetX) * (limits * 2) - limits;
-    var rotateX = (offsetY) * (limits * 2) - limits;
-
-    var shadowOffsetX = (offsetX) * 32 - 16;
-    var shadowOffsetY = (offsetY) * 32 - 16;
-
-    $(this).css({
-        "box-shadow": (1 / 6) * -shadowOffsetX + "px " + (1 / 6) * -shadowOffsetY + "px 3px rgba(0, 0, 0, 0.051), " +
-        (2 / 6) * -shadowOffsetX + "px " + (2 / 6) * -shadowOffsetY + "px 7.2px rgba(0, 0, 0, 0.073), " +
-        (3 / 6) * -shadowOffsetX + "px " + (3 / 6) * -shadowOffsetY + "px 13.6px rgba(0, 0, 0, 0.09), " +
-        (4 / 6) * -shadowOffsetX + "px " + (4 / 6) * -shadowOffsetY + "px 24.3px rgba(0, 0, 0, 0.107), " +
-        (5 / 6) * -shadowOffsetX + "px " + (5 / 6) * -shadowOffsetY + "px 45.5px rgba(0, 0, 0, 0.129), " +
-        -shadowOffsetX + "px " + -shadowOffsetY + "px 109px rgba(0, 0, 0, 0.18)",
-        transform: "perspective(1000px) rotateX(" + -rotateX + "deg) rotateY(" + rotateY + "deg)"
-    });
-
-    var glarePos = rotateX + rotateY + 90;
-    $(this)
-        .children()
-        .children()
-        .css("left", glarePos + "%");
-    });
-
-    $(".event_work").mouseleave(function (e) {
-    $(".event_work").css({"box-shadow": "0px 0px 3px rgba(0, 0, 0, 0.051), 0px 0px 7.2px rgba(0, 0, 0, 0.073), 0px 0px 13.6px rgba(0, 0, 0, 0.09), 0px 0px 24.3px rgba(0, 0, 0, 0.107), 0px 0px 45.5px rgba(0, 0, 0, 0.129), 0px 0px 109px rgba(0, 0, 0, 0.18)", "transform": "scale(1.0)"});
-    $(".event_img").css("left", "100%");
-    });
-}
 function main_para(){
     document.addEventListener("mousemove", parallax);
     const elem = document.querySelector(".flower");
@@ -128,29 +85,7 @@ function scrollbtn() {
             window.scrollTo({top: 750, behavior: "smooth"});
         })
 }
-/* 스크롤시 배경색 변경하기 */
-// function scroll_bg(){
-//     $(window).on("scroll touchmove",function(){
-//         if($(document).scrollTop()>=$("#home").position().top){
-//             $("body").css("background",$("#home").attr("data-bg"));
-//         };
-//         if($(document).scrollTop()>=$("#about").position().top){
-//             $("body").css("background",$("#about").attr("data-bg"));
-//         };
-//         if($(document).scrollTop()>=$("#skill").position().top){
-//             $("body").css("background",$("#skill").attr("data-bg"));
-//         };
-//         if($(document).scrollTop()>=$("#work").position().top){
-//             $("body").css("background",$("#work").attr("data-bg"));
-//         };
-//         if($(document).scrollTop()>=$("#others").position().top){
-//             $("body").css("background",$("#others").attr("data-bg"));
-//         };
-//         if($(document).scrollTop()>=$("#contact").position().top){
-//             $("body").css("background",$("#contact").attr("data-bg"));
-//         };
-//     })
-// }
+
 /* other work section*/
 function otherbtn() {
     const $titleli = $(".others_title_list");
@@ -182,7 +117,7 @@ function skill() {
 }
 // popup창
 function DesignModal() {
-    var $img = $(".event_img>img");
+    var $img = $(".design_img>img");
     var $popup = $(".layer_bg .popup");
     var $close = $(".layer_bg .close");
     var $bg = $(".layer_bg");
@@ -203,10 +138,19 @@ function DesignModal() {
     })
     $img.click(function (e) {
         e.preventDefault();
+        console.log($(this).parent().parent().parent().index())
         $bg.css("display", "block");
-        $popup.animate({
-            height: 700
-        }, 300);
+        
+        if($(this).parent().parent().parent().index()==2){
+            $popup.animate({
+                height: 700
+            }, 300).css("opacity",1);
+        }
+        if($(this).parent().parent().parent().index()==3){
+            $popup.animate({
+                height: 100
+            }, 300).css("opacity",1);
+        }
         var src = $(this).attr("src");
         var alt = $(this).attr("alt");
         $(".layer_bg .popup>img").attr("src", src).attr("alt", alt);

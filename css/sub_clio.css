@@ -1,22 +1,24 @@
+
 #wrap {font-family:'SB 어그로'}
 #wrap{width: 100%;padding-top:50px;box-sizing:border-box;}
 #wrap .con-box{width: 100%;}
-#wrap .con1{height:1080px;}
+#wrap .con1{height:780px;}
 #wrap .inner{width: 1600px;margin:auto;}
 #wrap .con1 .inner{display:flex;}
-#wrap .con1 .detail{width: 600px;height:670px;padding:25px;box-sizing:border-box;}
+#wrap .con1 .detail{width: 600px;height:670px;padding:25px;box-sizing:border-box;font-weight: 100;line-height:25px;}
 #wrap .con1 .detail h2{font-size: 50px;margin-top:20px;margin-bottom:20px;font-weight: 900;}
 .con1 .detail strong{margin-bottom:20px;display:block;}
-.con1 .detail .txt{width: 500px;height: 170px;border:1px solid #000;padding:5px;box-sizing:border-box;}
-.con1 .detail .list{margin-top:20px;margin-bottom:20px;height: 200px;}
-.con1 .detail .list li{padding-top:20px;box-sizing:border-box;}
-.con1 .detail .list li strong{width: 100px;height: 25px;display:inline-block;background:#000000;color:#fff;text-align:center;line-height:25px;box-sizing:border-box;border-radius:5px;box-shadow:5px 5px 5px #ccc;}
+.con1 .detail .txt{width: 500px;height: 170px;padding:5px;box-sizing:border-box;color:#383838;border:5px solid #d8d8d8;border-radius:10px;}
+.con1 .detail .list{margin-top:20px;height: 200px;}
+.con1 .detail .list li{box-sizing:border-box;}
+.con1 .detail .list li strong{width: 100px;height: 25px;display:inline-block;background:#303030;color:#fff;text-align:center;line-height:25px;box-sizing:border-box;border-radius:5px;box-shadow:5px 5px 5px #ccc;}
 .con1 .detail .list li em{margin-left:20px;}
 .con1 .detail .box {display:flex;}
 .con1 .detail .box li{margin-right:10px;width: 160px;height: 50px;}
-.con1 .detail .box li a{display:block;text-align:center;border:0px solid #000; background:#000000; color:#fff;line-height:50px;border-radius:5px;box-shadow:5px 5px 0px #999999;}
-.con1 .detail .box li:last-child{margin-right:0;margin-top:65px;margin-left:-510px;}
-.con1 .computer_img{}
+.con1 .detail .box li a{display:block;text-align:center;border:0px solid #000; background:#303030; color:#fff;line-height:50px;border-radius:5px;box-shadow:5px 5px 5px #ccc;transition:0.5s;}
+.con1 .detail .box li a:hover{box-shadow:none;}
+.con1 .detail .box li:last-child{margin-right:0;}
+
 
 
 .con2 {height:1080px;background-image:url('../images/grid.png');background-repeat:no-repeat;background-position:50% 0;}
