@@ -269,11 +269,40 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     font-size: 15px;
     margin-bottom: 50px;
     line-height: 20px;
+    position:relative;
+}
+.wave-one{
+    position: absolute;
+    left:105px;
+    width: 250px;
+    height: 250px;
+    border-radius: 183px 169px 258px 189px;
+    background: rgb(66, 118, 63,0.5);
+    animation: move 3s infinite linear;
+    z-index: 5;
+}
+.wave-two {
+    position: absolute;
+    left:110px;
+    width: 250px;
+    height: 250px;
+    border-radius: 188px 170px 270px 190px;
+    background: rgb(66, 118, 63,0.3);
+    animation: move 6s infinite linear;
+    z-index: 6;
+}
+@keyframes move {
+    100%{transform: rotate(360deg);}
 }
 .about_box:nth-of-type(1) {
     height: 300px;
     border-bottom: 2px dashed #42763f;
-
+}
+.about_box>.about_img{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:10;
 }
 .about_box:nth-of-type(2) {
     height: 300px;
@@ -328,7 +357,10 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     overflow: hidden;
 }
 .about_resume {
-    margin: 20px auto;
+    position:absolute;
+    left:50%;transform:translateX(-50%);
+    bottom:50px;
+    z-index:10;
     height: 40px;
     width: 150px;
 }

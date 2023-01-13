@@ -36,9 +36,6 @@
 .con1 .detail .box li{margin-right:10px;width: 160px;height: 50px;}
 .con1 .detail .box li a{display:block;text-align:center;border:0px solid #000; background:#fe1b0e; color:#fff;line-height:50px;border-radius:5px;box-shadow:5px 5px 5px #ccc;transition:0.5s;}
 .con1 .detail .box li a:hover{box-shadow:none;}
-.con1 .detail .box li:last-child{margin-right:0;margin-top:65px;margin-left:-510px;}
-.con1 .computer_img{}
-
 
 .con2 {height:1080px;background-image:url('../images/grid.png');background-repeat:no-repeat;background-position:50% 0;}
 .con2 h2{font-size: 50px;font-weight: 900;text-align:center;}
