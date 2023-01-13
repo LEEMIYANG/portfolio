@@ -470,7 +470,7 @@ color:#f9bb85;
 .web_txt{float:left;padding:0 50px;width:50%;}
 .web_name{font-size: 40px;font-weight: 500;padding-top:10px;font-family:"Cafe24 Decobox";}
 .web_name>em{font-size: 16px;display:block;margin-top:5px;font-weight: 600;}
-.web_overview{margin:30px 0 50px;}
+.web_overview{margin:30px 0 50px;font-family: 'NanumSquare', sans-serif;}
 .web_desc{margin-bottom:10px;font-size: 14px;}
 .web_desc_title{font-weight: 900;display:inline-block;background:rgb(66, 118, 63,0.3);}
 .web_desc_detail{display:inline-block;}
