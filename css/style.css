@@ -484,8 +484,9 @@ color:#f9bb85;
     height:780px;background:#f5e2d2;
 }
 #React h2.section_title::after{content:"REACT";}
-.react_wrap{margin-left:400px;}
+.react_wrap{height:400px;width:700px;margin:auto;}
 .react_work{width:300px;margin-right:100px;height:350px;background:#fff;box-shadow:5px 5px 15px rgba(230,110,44,0.6);border-radius:10px;float:left;transition:0.5s;position:relative;}
+.react_work:last-child{margin-right:0;}
 .react_img{height:250px;width:250px;overflow:hidden;margin:auto}
 .react_img>img{padding:10px;padding-top:50px;}
 .react_txt{text-align:center;margin-top:10px;font-size: 16px;padding:10px;}
