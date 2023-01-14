@@ -144,7 +144,7 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
 }
 .gnb > li {
     float: left;
-    width: 20%;
+    width: 16%;
     height: 100%;
     display: block;
 }
@@ -478,6 +478,21 @@ color:#f9bb85;
 .web_btn{padding:0;}
 .web_btn>a{font-family:"Cafe24 Decobox";font-size: 15px;font-weight: 100;display:block;line-height:40px;width:100px;height:40px;border:1px solid #42763f;transition:0.5s;}
 .web_btn:hover>a{background:#42763f;color:#fff;box-shadow:2px 2px 7px #000;}
+
+/* react */
+#React{
+    height:780px;background:#f5e2d2;
+}
+#React h2.section_title::after{content:"REACT";}
+.react_wrap{margin-left:400px;}
+.react_work{width:300px;margin-right:100px;height:350px;background:#fff;box-shadow:5px 5px 15px rgba(230,110,44,0.6);border-radius:10px;float:left;transition:0.5s;position:relative;}
+.react_img{height:250px;width:250px;overflow:hidden;margin:auto}
+.react_img>img{padding:10px;padding-top:50px;}
+.react_txt{text-align:center;margin-top:10px;font-size: 16px;padding:10px;}
+.react_btn{width:70px;height:70px;border-radius:50%;background:rgba(230,110,44,0.6);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transition:0.5s;}
+.react_btn>a{display:block;text-align:center;cursor:pointer;color:#fff;font-size: 40px;}
+.react_work:hover{box-shadow:none;border:5px solid rgba(230,110,44,0.6);}
+.react_work:hover .react_btn{background:rgba(230,110,44);}
 /* design */
 #design_work {
     width: 100%;
