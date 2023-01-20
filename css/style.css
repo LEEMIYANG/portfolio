@@ -1,12 +1,36 @@
 /* fonts */
-@font-face{src:url("../fonts/Cafe24Behappy.ttf");font-family:"Cafe24 Behappy";}
-@font-face{src:url("../fonts/Cafe24Decobox.ttf");font-family:"Cafe24 Decobox"}
-@font-face{src:url("../fonts/Cafe24Decoline.ttf");font-family:"Cafe24 Decoline"}
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css);
-strong,em,p,a,h1,h2,h3,h4,h5,h6{transform:skew(-0.001deg);}
-
+@font-face {
+    src: url("../fonts/Cafe24Behappy.ttf");
+    font-family: "Cafe24 Behappy";
+}
+@font-face {
+    src: url("../fonts/Cafe24Decobox.ttf");
+    font-family: "Cafe24 Decobox"
+}
+@font-face {
+    src: url("../fonts/Cafe24Decoline.ttf");
+    font-family: "Cafe24 Decoline"
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumSquare_acL.woff2') format('woff2');
+    font-display: swap;
+}
+strong,
+em,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    transform: skew(-0.001deg);
+}
 /* reset */
-
 img {
     width: 100%;
 }
@@ -28,7 +52,7 @@ button {
     border: none;
     font-size: 16px;
     color: #000;
-    font-family:"Cafe24 Decobox"
+    font-family: "Cafe24 Decobox"
 }
 html {
     scroll-behavior: smooth;
@@ -38,30 +62,52 @@ html {
 h2.section_title {
     text-align: center;
     font-size: 135px;
-    margin-bottom:50px;
-    padding-top:100px;
-    font-family:"Cafe24 Decobox";
-    color:#42763f;
-    font-weight:500;
-    position:relative;
-    
+    margin-bottom: 50px;
+    padding-top: 100px;
+    font-family: "Cafe24 Decobox";
+    color: #42763f;
+    font-weight: 500;
+    position: relative;
 }
-h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;font-weight:100;text-align:center;margin-top:-142px;margin-left:-5px;font-size: 137px;letter-spacing:-1px}
-
-#about h2.section_title::after{content:"ABOUT M.Y";}
+h2.section_title::after {
+    font-family: "Cafe24 Decoline";
+    display: block;
+    color: #000;
+    font-weight: 100;
+    text-align: center;
+    margin-top: -142px;
+    margin-left: -5px;
+    font-size: 137px;
+    letter-spacing: -1px
+}
+#about h2.section_title::after {
+    content: "ABOUT M.Y";
+}
 .green {
     color: #42763f;
     font-weight: 900;
-    background:rgb(66, 118, 63,0.1);
+    background: rgb(66, 118, 63, 0.1);
 }
-
 /* mouse scroll icon */
-.scroll-downs{position:absolute;bottom:100px;left:50%;animation:scroll infinite 2s;}
-.scroll--downs{font-family:"Cafe24 Behappy";font-size: 30px;cursor:pointer;color:rgba(230,110,44,0.6)}
-.scroll--downs>i{font-size: 15px;display:block;text-align:center;}
+.scroll-downs {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    animation: scroll infinite 2s;
+}
+.scroll--downs {
+    font-family: "Cafe24 Behappy";
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(230, 110, 44, 0.6)
+}
+.scroll--downs > i {
+    font-size: 15px;
+    display: block;
+    text-align: center;
+}
 @keyframes scroll {
-    0% {
-    }
+    0% {}
     50% {
         transform: translateY(5px);
     }
@@ -69,51 +115,66 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
         transform: translateY(0px);
     }
 }
-#wrap{min-width:1600px;}
-::selection{background-color:rgb(66, 118, 63,0.2);}
+#wrap {
+    min-width: 1600px;
+}
+::selection {
+    background-color: rgb(66, 118, 63, 0.2);
+}
 .container {
     font-family: 'NanumSquare', sans-serif;
-    z-index:15;
+    z-index: 15;
 }
 /* top btn */
 .top.on {
-    opacity:1;
-    transition:0.5s
+    opacity: 1;
+    transition: 0.5s
 }
-.top:hover .top__svg{
-    animation-play-state:paused;
+.top:hover .top__svg {
+    animation-play-state: paused;
 }
 .top {
-    position:fixed;
-    opacity:0;
-    right:50px;bottom:50px;
+    position: fixed;
+    opacity: 0;
+    right: 50px;
+    bottom: 50px;
     width: 10rem;
     height: 10rem;
     display: inline-block;
-    font: 300 22px "Josefin Sans"; 
+    font: 300 22px "Josefin Sans";
     text-transform: uppercase;
     letter-spacing: 0.1175em;
     word-spacing: 0.3em;
-    
 }
-.top__svg{
+.top__svg {
     width: 100%;
     height: auto;
     transform-box: fill-box;
     stroke-width: 0.05em;
     stroke-linecap: round;
     stroke-linejoin: round;
-    fill:#000;
-    stroke:#0000;
-    animation:rotate normal infinite 30s linear;
+    fill: #000;
+    stroke: #0000;
+    animation: rotate normal infinite 30s linear;
 }
-.top_icon{position:fixed;font-size: 30px;font-weight: 100;font: 100 22px "Josefin Sans"; left:50%;top:50%;transform:translate(-50%,-50%);transition:0.5s;}
-.top:hover .top_icon{font-size: 35px;}
+.top_icon {
+    position: fixed;
+    font-size: 30px;
+    font-weight: 100;
+    font: 100 22px "Josefin Sans";
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+.top:hover .top_icon {
+    font-size: 35px;
+}
 @keyframes rotate {
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
+}
 /* header */
 #header {
     width: 100%;
@@ -123,7 +184,6 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     top: 0;
     left: 0;
     transition: 0.5s;
-    
 }
 .logo {
     float: left;
@@ -135,7 +195,7 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     font-size: 50px;
     line-height: 100px;
     text-align: center;
-    font-family:"Cafe24 Behappy"
+    font-family: "Cafe24 Behappy"
 }
 #nav {
     float: right;
@@ -155,109 +215,137 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     height: 100%;
     width: 100%;
     font-size: 18px;
-    font-family:"Cafe24 decobox";
-    transition:0.5s;
+    font-family: "Cafe24 decobox";
+    transition: 0.5s;
 }
-.gnb > li:hover>a {
-    color: #42763f;;
+.gnb > li:hover > a {
+    color: #42763f;
 }
-.gnb >li.on > a{
-    color:#42763f;
+.gnb > li.on > a {
+    color: #42763f;
 }
 #header.fixed {
     position: fixed;
     top: 0;
     left: 0;
     border: none;
-    background:rgb(246, 243, 235,0.9);
-    box-shadow:5px 5px 5px rgba(0,0,0,0.1);
+    background: rgb(246, 243, 235, 0.9);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
     height: 60px;
 }
-#header a{
-    transition:0.5s;
+#header a {
+    transition: 0.5s;
 }
-#header.fixed  a {
+#header.fixed a {
     line-height: 60px;
 }
-
 /* main */
-
-  
 /* home */
 #home {
     width: 100%;
     height: 800px;
     position: relative;
-    background:#f9bb85;
+    background: #f9bb85;
 }
-.home_text{font-size: 120px;position:absolute;top:300px;left:50%;transform:translateX(-50%);}
-.home_greeting{font-family:"Cafe24 Behappy";font-weight: 500;color:#42763f;text-shadow:5px 5px 0px rgba(230,110,44,0.6);}
-
-.home_txt{font-size: 20px;margin-top:10px;}
-.close_btn{text-align:center;background:#fff;width:200px;height: 25px;line-height:25px;cursor:pointer;position:absolute;top:260px;}
-.screen_info{position:absolute;top:100px;;width:200px;height:160px;background:rgba(255,255,255,0.3);text-align:left;padding:20px;line-height:20px;font-size: 14px;}
-
-.flower{width:300px;height:300px; background-repeat:no-repeat;background-position:center;
+.home_text {
+    font-size: 120px;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.home_greeting {
+    font-family: "Cafe24 Behappy";
+    font-weight: 500;
+    color: #42763f;
+    text-shadow: 5px 5px 0 rgba(230, 110, 44, 0.6);
+}
+.home_txt {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.close_btn {
+    text-align: center;
+    background: #fff;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 260px;
+}
+.screen_info {
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.3);
+    text-align: left;
+    padding: 20px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.flower {
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
     background-position: 50% 50%;
 }
-.p_f{
-    background-image:url(../images/purple_flower.png);
+.p_f {
+    background-image: url('../images/purple_flower.png');
     /* animation:rotate_flower 6s infinite; */
 }
-.purple_flower{position:absolute;left:950px;top:250px;}
-
-@keyframes rotate_flower{
-    0%{transform:rotate(360deg);}
+.purple_flower {
+    position: absolute;
+    left: 950px;
+    top: 250px;
 }
-
+@keyframes rotate_flower {
+    0% {
+        transform: rotate(360deg);
+    }
+}
 .waves {
-    position:relative;
+    position: relative;
     width: 100%;
-    height:15vh;
-    margin-top:-90px; /*Fix for safari gap*/
-    min-height:100px;
-    max-height:150px;
+    height: 15vh;
+    margin-top: -90px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
 }
 .parallax > use {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-  }
-  .parallax > use:nth-child(1) {
+    animation: move-forever 25s cubic-bezier(0.55,0.5,0.45,0.5) infinite;
+}
+.parallax > use:nth-child(1) {
     animation-delay: -2s;
     animation-duration: 7s;
-  }
-  .parallax > use:nth-child(2) {
+}
+.parallax > use:nth-child(2) {
     animation-delay: -3s;
     animation-duration: 10s;
-  }
-  .parallax > use:nth-child(3) {
+}
+.parallax > use:nth-child(3) {
     animation-delay: -4s;
     animation-duration: 13s;
-  }
-  .parallax > use:nth-child(4) {
+}
+.parallax > use:nth-child(4) {
     animation-delay: -5s;
     animation-duration: 20s;
-  }
+}
 @keyframes move-forever {
     0% {
-     transform: translate3d(-90px,0,0);
+        transform: translate3d(-90px, 0, 0);
     }
-    100% { 
-      transform: translate3d(85px,0,0);
+    100% {
+        transform: translate3d(85px, 0, 0);
     }
-  }
-
-
-
-
-
+}
 /* about */
-
 #about {
     width: 100%;
     height: 1850px;
-    background:rgb(246, 243, 235);
-
-
+    background: rgb(246, 243, 235);
 }
 .about_wrap {
     padding: 0 300px;
@@ -269,44 +357,46 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     font-size: 15px;
     margin-bottom: 50px;
     line-height: 20px;
-    position:relative;
+    position: relative;
 }
-.wave-one{
+.wave-one {
     position: absolute;
-    left:105px;
+    left: 105px;
     width: 250px;
     height: 250px;
     border-radius: 183px 169px 258px 189px;
-    background: rgb(66, 118, 63,0.5);
+    background: rgb(66, 118, 63, 0.5);
     animation: move 3s infinite linear;
     z-index: 5;
 }
 .wave-two {
     position: absolute;
-    left:110px;
+    left: 110px;
     width: 250px;
     height: 250px;
     border-radius: 188px 170px 270px 190px;
-    background: rgb(66, 118, 63,0.3);
+    background: rgb(66, 118, 63, 0.3);
     animation: move 6s infinite linear;
     z-index: 6;
 }
 @keyframes move {
-    100%{transform: rotate(360deg);}
+    100% {
+        transform: rotate(360deg);
+    }
 }
 .about_box:nth-of-type(1) {
     height: 300px;
     border-bottom: 2px dashed #42763f;
 }
-.about_box>.about_img{
-    position:absolute;
-    z-index:10;
-    left:140px;
+.about_box > .about_img {
+    position: absolute;
+    z-index: 10;
+    left: 140px;
 }
 .about_box:nth-of-type(2) {
     height: 300px;
     padding-top: 50px;
-    border-bottom:2px dashed #42763f;
+    border-bottom: 2px dashed #42763f;
 }
 .about_box:nth-of-type(3) {
     height: 500px
@@ -324,7 +414,7 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     display: block;
     font-weight: 900;
     margin-bottom: 5px;
-    color:rgb(66, 118, 63)
+    color: rgb(66, 118, 63)
 }
 .about_lic {
     margin-top: 80px;
@@ -337,12 +427,17 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     display: block;
     font-weight: 900;
     margin-bottom: 5px;
-    color:#42763f
+    color: #42763f
 }
 .lic_em {
     display: block;
 }
-.about_title{position:relative;text-transform: uppercase;font-family:"Cafe24 Decobox";font-weight: 100;}
+.about_title {
+    position: relative;
+    text-transform: uppercase;
+    font-family: "Cafe24 Decobox";
+    font-weight: 100;
+}
 .about_box > div > h3 {
     font-weight: 900;
     font-size: 25px;
@@ -356,10 +451,10 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     overflow: hidden;
 }
 .about_resume {
-    position:absolute;
-    left:165px;
-    bottom:50px;
-    z-index:10;
+    position: absolute;
+    left: 165px;
+    bottom: 50px;
+    z-index: 10;
     height: 40px;
     width: 150px;
 }
@@ -367,15 +462,15 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     display: block;
     text-align: center;
     line-height: 40px;
-    border:1px solid #42763f;
-    font-family:"Cafe24 Decobox";
+    border: 1px solid #42763f;
+    font-family: "Cafe24 Decobox";
     font-size: 15px;
-    transition:0.5s;
+    transition: 0.5s;
 }
-.about_resume__click:hover{
-    background:rgb(66, 118, 63);
-    color:#fff;
-    box-shadow:3px 3px 10px #000;
+.about_resume__click:hover {
+    background: rgb(66, 118, 63);
+    color: #fff;
+    box-shadow: 3px 3px 10px #000;
 }
 .about_strength {
     font-weight: 900;
@@ -391,13 +486,16 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
     display: block;
     margin-bottom: 10px;
 }
-.about_p>strong>i{
-    color:#42763f}
+.about_p > strong > i {
+    color: #42763f
+}
 /* about - skill */
 .about_skill {
     position: relative;
 }
-.about_skill_title{font-family:"Cafe24 Decobox";}
+.about_skill_title {
+    font-family: "Cafe24 Decobox";
+}
 .skill_list {
     width: 1000px;
     transition: 0.5s;
@@ -405,108 +503,225 @@ h2.section_title::after{font-family:"Cafe24 Decoline";display:block;color:#000;f
 .skill_list.on {
     height: 150px;
 }
-.skill_list.on .skill_list__name{font-weight: 900;}
+.skill_list.on .skill_list__name {
+    font-weight: 900;
+}
 .skill_list__name {
     cursor: pointer;
     width: 100%;
     height: 50px;
     font-size: 20px;
-    font-style:italic;
+    font-style: italic;
     padding-left: 15px;
     position: relative;
-    border-bottom:3px dashed #f9bb85;
+    border-bottom: 3px dashed #f9bb85;
     line-height: 50px;
     margin-top: -1px;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
-.skill_list .skill_list__name .skill_level{
-font-size: 10px;
-margin-left:5px;
-color:#f9bb85;
+.skill_list .skill_list__name .skill_level {
+    font-size: 10px;
+    margin-left: 5px;
+    color: #f9bb85;
 }
-.skill_level>i{margin-right:2px;}
+.skill_level > i {
+    margin-right: 2px;
+}
 .skill_list .skill_list__name::before {
-    content:"\f22d";
+    content: "\f22d";
     font-family: "FontAwesome";
-    font-style:normal;
-    font-size:10px;
-    display:block;
-    position:absolute;
-    left:0;
-    top:0;
-    color:#f9bb85;
+    font-style: normal;
+    font-size: 10px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #f9bb85;
 }
-.skill_list.on .skill_list__name::before{
+.skill_list.on .skill_list__name::before {
     font-weight: 900;
 }
-.skill_list .skill_list__name::after{
+.skill_list .skill_list__name::after {
     content: "\f0d7";
     display: block;
     position: absolute;
-    right:10px;
-    top:0;
+    right: 10px;
+    top: 0;
     font-family: "FontAwesome";
-    font-style:normal;
-    color:#f9bb85;
+    font-style: normal;
+    color: #f9bb85;
 }
 .skill_list.on .skill_list__name::after {
     content: "\f0d8";
 }
-
 .skill_list__desc {
     display: none;
     width: 100%;
     height: 100px;
     padding: 10px 25px;
     line-height: 25px;
-    background:#f5e2d2;
+    background: #f5e2d2;
 }
-
 /* web */
-#web_work{background:#F6F3EB;}
-#web_work h2.section_title::after{content:"WEB PROJECT";}
-.web{height:500px;width:1000px;padding:80px 50px;margin:auto;}
-.web_img{float:left;width:50%;height:350px;overflow:hidden;border-radius:30px;border:10px solid rgb(66, 118, 63,0.1);}
-.web_txt{float:left;padding:0 50px;width:50%;}
-.web_name{font-size: 40px;font-weight: 500;padding-top:10px;font-family:"Cafe24 Decobox";}
-.web_name>em{font-size: 16px;display:block;margin-top:5px;font-weight: 600;}
-.web_overview{margin:30px 0 50px;font-family: 'NanumSquare', sans-serif;}
-.web_desc{margin-bottom:10px;font-size: 14px;}
-.web_desc_title{font-weight: 900;display:inline-block;background:rgb(66, 118, 63,0.3);}
-.web_desc_detail{display:inline-block;}
-.btndiv{margin-top:30px;}
-.web_btn{padding:0;}
-.web_btn>a{font-family:"Cafe24 Decobox";font-size: 15px;font-weight: 100;display:block;line-height:40px;width:100px;height:40px;border:1px solid #42763f;transition:0.5s;}
-.web_btn:hover>a{background:#42763f;color:#fff;box-shadow:2px 2px 7px #000;}
-
-/* react */
-#React{
-    height:780px;background:#f5e2d2;
+#web_work {
+    background: #F6F3EB;
 }
-#React h2.section_title::after{content:"REACT";}
-.react_wrap{height:400px;width:700px;margin:auto;}
-.react_work{width:300px;margin-right:100px;height:350px;background:#fff;box-shadow:5px 5px 15px rgba(230,110,44,0.6);border-radius:10px;float:left;transition:0.5s;position:relative;}
-.react_work:last-child{margin-right:0;}
-.react_img{height:250px;width:250px;overflow:hidden;margin:auto}
-.react_img>img{padding:10px;padding-top:50px;}
-.react_txt{text-align:center;margin-top:10px;font-size: 16px;padding:10px;}
-.react_btn{width:70px;height:70px;border-radius:50%;background:rgba(230,110,44,0.6);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);transition:0.5s;}
-.react_btn>a{display:block;text-align:center;cursor:pointer;color:#fff;font-size: 40px;}
-.react_work:hover{box-shadow:none;border:5px solid rgba(230,110,44,0.6);}
-.react_work:hover .react_btn{background:rgba(230,110,44);}
+#web_work h2.section_title::after {
+    content: "WEB PROJECT";
+}
+.web {
+    height: 500px;
+    width: 1000px;
+    padding: 80px 50px;
+    margin: auto;
+}
+.web_img {
+    float: left;
+    width: 50%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 10px solid rgb(66, 118, 63, 0.1);
+}
+.web_txt {
+    float: left;
+    padding: 0 50px;
+    width: 50%;
+}
+.web_name {
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 10px;
+    font-family: "Cafe24 Decobox";
+}
+.web_name > em {
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+    font-weight: 600;
+}
+.web_overview {
+    margin: 30px 0 50px;
+    font-family: 'NanumSquare', sans-serif;
+}
+.web_desc {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.web_desc_title {
+    font-weight: 900;
+    display: inline-block;
+    background: rgb(66, 118, 63, 0.3);
+}
+.web_desc_detail {
+    display: inline-block;
+}
+.btndiv {
+    margin-top: 30px;
+}
+.btndiv > a {
+    font-family: "Cafe24 Decobox";
+    font-size: 15px;
+    font-weight: 100;
+    display: block;
+    float: left;
+    line-height: 40px;
+    width: 100px;
+    height: 40px;
+    margin-right: 5px;
+    text-align: center;
+    border: 1px solid #42763f;
+    transition: 0.5s;
+}
+.btndiv > a:hover {
+    background: #42763f;
+    color: #fff;
+    box-shadow: 2px 2px 7px #000;
+}
+/* react */
+#React {
+    height: 780px;
+    background: #f5e2d2;
+}
+#React h2.section_title::after {
+    content: "REACT";
+}
+.react_wrap {
+    height: 400px;
+    width: 700px;
+    margin: auto;
+}
+.react_work {
+    width: 300px;
+    margin-right: 100px;
+    height: 350px;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(230, 110, 44, 0.6);
+    border-radius: 10px;
+    float: left;
+    transition: 0.5s;
+    position: relative;
+}
+.react_work:last-child {
+    margin-right: 0;
+}
+.react_img {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    margin: auto
+}
+.react_img > img {
+    padding: 50px 10px 10px;
+}
+.react_txt {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    padding: 10px;
+}
+.react_btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(230, 110, 44, 0.6);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+.react_btn > a {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 40px;
+    line-height: 80px;
+    padding-left: 5px;
+}
+.react_work:hover {
+    box-shadow: none;
+    border: 5px solid rgba(230, 110, 44, 0.6);
+}
+.react_work:hover .react_btn {
+    background: rgba(230, 110, 44);
+}
 /* design */
 #design_work {
     width: 100%;
     height: 1080px;
     position: relative;
-    background:#F6F3EB;
+    background: #F6F3EB;
 }
-#design_work h2.section_title::after{content:"DESIGN WORK";}
-.design_event{
-    width:100%;
-    height:500px;
-    padding-left:300px;
-    box-sizing:border-box;
+#design_work h2.section_title::after {
+    content: "DESIGN WORK";
+}
+.design_event {
+    width: 100%;
+    height: 500px;
+    padding-left: 300px;
+    box-sizing: border-box;
 }
 .event_work {
     float: left;
@@ -514,24 +729,29 @@ color:#f9bb85;
     padding: 5px;
     box-sizing: border-box;
     cursor: pointer;
-    background:#fff;
+    background: #fff;
 }
 .design_img {
     width: 230px;
     height: 300px;
     overflow: hidden;
-    transition:0.5s;
+    transition: 0.5s;
 }
-.design_img img{transition:0.5s;filter:grayscale(0.9);}
-.design_img:hover img{filter:none;transform:scale(1.05);}
-
+.design_img img {
+    transition: 0.5s;
+    filter:grayscale(0.9);
+}
+.design_img:hover img {
+    filter:none;
+    transform: scale(1.05);
+}
 .event_info {
-    width:230px;
+    width: 230px;
     height: 30px;
     line-height: 30px;
     text-align: center;
     font-size: 12px;
-    color:#999;
+    color: #999;
 }
 .layer_bg {
     display: none;
@@ -546,43 +766,43 @@ color:#f9bb85;
 .layer_bg .popup {
     width: 700px;
     height: 700px;
-    opacity:0;
+    opacity: 0;
     background: #fff;
-    padding:10px;
+    padding: 10px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    box-shadow:5px 5px 10px #333;
+    box-shadow: 5px 5px 10px #333;
     overflow-y: scroll;
     z-index: 1000;
-    transition:0.5s;
+    transition: 0.5s;
 }
 .layer_bg .popup img {
     width: 100%;
     box-sizing: border-box;
 }
 .layer_bg .close {
-    z-index:1000;
+    z-index: 1000;
     position: fixed;
     top: 380px;
-    right:473px;
-    width:50px;
-    height:50px;
+    right: 473px;
+    width: 50px;
+    height: 50px;
     background: none;
     display: block;
     font-size: 30px;
     text-align: center;
     line-height: 50px;
     color: #fff;
-    background:black;
-    font-weight:900;
+    background: black;
+    font-weight: 900;
     cursor: pointer;
-    transition:0.5s;
+    transition: 0.5s;
 }
-.layer_bg .close:hover{
+.layer_bg .close:hover {
     font-size: 25px;
-    color:#999;
+    color: #999;
 }
 .popup::-webkit-scrollbar {
     width: 10px;
@@ -594,15 +814,19 @@ color:#f9bb85;
 .popup::-webkit-scrollbar-track {
     background-color: #F6F3EB;
 }
-.banner_title{
-    text-align:center;
-    margin-top:20px;
-    font-size: 12px; 
-    color:#999;
+.banner_title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
 }
-
-.banner_work .design_img{box-sizing:border-box;width:33.3%;float:left;padding:5px;cursor:pointer;}
-
+.banner_work .design_img {
+    box-sizing: border-box;
+    width: 33.3%;
+    float: left;
+    padding: 5px;
+    cursor: pointer;
+}
 @keyframes ban_rolling1 {
     0% {
         top: 0;
@@ -652,9 +876,11 @@ color:#f9bb85;
 #contact {
     width: 100%;
     height: 720px;
-    background:#f9bb85;
+    background: #f9bb85;
 }
-#contact h2.section_title::after{content:"CONTACT ME";}
+#contact h2.section_title::after {
+    content: "CONTACT ME";
+}
 #contact .left {
     float: left;
     width: 50%;
@@ -667,10 +893,10 @@ color:#f9bb85;
 }
 #contact .left .contact-text {
     font-size: 55px;
-    font-family:"Cafe24 Behappy";
+    font-family: "Cafe24 Behappy";
 }
-#contact .right .contact-text{
-    font-family:"Cafe24 Behappy";
+#contact .right .contact-text {
+    font-family: "Cafe24 Behappy";
     font-size: 30px;
 }
 #contact .left > p {
@@ -678,100 +904,104 @@ color:#f9bb85;
     margin: 10px 0 50px;
 }
 #contact .icons-content {
-    display:block;
-    width:180px;
+    display: block;
+    width: 180px;
     margin-bottom: 10px;
-    font-family:"Cafe24 Behappy";
-    font-size:25px;
-    cursor:pointer;
+    font-family: "Cafe24 Behappy";
+    font-size: 25px;
+    cursor: pointer;
 }
-#contact .icons-content>a{position:relative;}
+#contact .icons-content > a {
+    position: relative;
+}
 #contact .icons-content > a::before {
-    width:0%;
-    height:5px;
-    left:0;bottom:0;
-    content:"";
-    position:absolute;
-    display:block;
-    background:rgba(230,110,44,0.6);
-    transition:0.5s;
+    width: 0;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    content: "";
+    position: absolute;
+    display: block;
+    background: rgba(230, 110, 44, 0.6);
+    transition: 0.5s;
 }
-#contact .icons-content:hover>a::before{
-    width:100%;
+#contact .icons-content:hover > a::before {
+    width: 100%;
 }
-#contact .icons-content >i {
+#contact .icons-content > i {
     margin-right: 10px;
-    transition:6s;
-    width:30px;height:30px;
-    background:rgba(230,110,44,0.6);
-    color:rgba(0,0,0,0.8);
-    border-radius:10px;
-    text-align:center;
-    line-height:30px;
+    transition: 6s;
+    width: 30px;
+    height: 30px;
+    background: rgba(230, 110, 44, 0.6);
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
     font-size: 16px;
 }
 #contact input {
     width: 300px;
     height: 35px;
     font-size: 14px;
-    padding-left:10px;
+    padding-left: 10px;
     font-family: 'NanumSquare', sans-serif;
-    border:1px solid rgba(230,110,44,0.6);
+    border: 1px solid rgba(230, 110, 44, 0.6);
 }
-#contact input::placeholder,textarea::placeholder{
-    font-family:"Cafe24 Behappy";
+#contact input::placeholder,
+textarea::placeholder {
+    font-family: "Cafe24 Behappy";
     font-size: 24px;
-    color:#999;
+    color: #999;
 }
-textarea{
-    font-family:"Cafe24 Behappy";
+textarea {
+    font-family: "Cafe24 Behappy";
     font-size: 14px;
     width: 300px;
     height: 200px;
-    padding-left:10px;
-    border:1px solid rgba(230,110,44,0.6);}
+    padding-left: 10px;
+    border: 1px solid rgba(230, 110, 44, 0.6);
+}
 #contact .field {
     margin-top: 5px;
 }
 #contact .btn {
-    width:300px;
-    position:relative;
-    
+    width: 300px;
+    position: relative;
 }
-#contact button:hover svg{
-    transform:rotate(15deg);
-    fill:#fff;
+#contact button:hover svg {
+    transform: rotate(15deg);
+    fill: #fff;
 }
-#contact svg{
-    position:absolute;
-    top:7px;
-    right:100px;
-    height:25px;
+#contact svg {
+    position: absolute;
+    top: 7px;
+    right: 100px;
+    height: 25px;
     width: auto;
-    transition:0.5s;
+    transition: 0.5s;
 }
 #contact button {
     line-height: 40px;
     width: 300px;
     height: 40px;
-    margin: 0px auto;
+    margin: 0 auto;
     cursor: pointer;
-    transition:0.5s;
-    color:#000;
-    border:1px solid rgba(230,110,44,0.6);;
-    
+    transition: 0.5s;
+    color: #000;
+    border: 1px solid rgba(230, 110, 44, 0.6);
 }
-#contact button:hover{
-    color:#fff;
-    background-color:rgba(230,110,44,0.6);
-    box-shadow:3px 3px 10px #000;
+#contact button:hover {
+    color: #fff;
+    background-color: rgba(230, 110, 44, 0.6);
+    box-shadow: 3px 3px 10px #000;
 }
 /* footer */
 #footer {
     width: 100%;
     height: 90px;
     font-size: 14px;
-    background:#f9bb85;
+    background: #f9bb85;
 }
 .copyright {
     text-align: center;
@@ -779,31 +1009,33 @@ textarea{
     font-weight: 100;
     font-size: 14px;
 }
-.bar{
-    width:100%;
-    height:60px;
-    background:#42763f;
-    overflow:hidden;
-    padding:11px 0;
-    box-sizing:border-box;
-    white-space:nowrap;
-    position:relative;
-    display:flex;
-    border-top:2px solid;
-    border-bottom:2px solid;
-
+.bar {
+    width: 100%;
+    height: 60px;
+    background: #42763f;
+    overflow: hidden;
+    padding: 11px 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
 }
-.bar span{
-    font-size:2.5rem;
-    line-height:1;
-    font-weight:normal;
-    white-space:nowrap;
-    font-family:"Cafe24 Decobox";
-    text-align:center;
-    animation:textloop 10s linear infinite;
+.bar span {
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: normal;
+    white-space: nowrap;
+    font-family: "Cafe24 Decobox";
+    text-align: center;
+    animation: textloop 10s linear infinite;
 }
-@keyframes textloop{
-    0%{transform:translateX(0);}
-    100%{transform:translateX(-100%);}
-
+@keyframes textloop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
