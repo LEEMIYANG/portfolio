@@ -717,10 +717,10 @@ h2.section_title::after {
 #design_work h2.section_title::after {
     content: "DESIGN WORK";
 }
+
 .design_event {
-    width: 100%;
+    padding-left:350px;
     height: 500px;
-    padding-left: 300px;
     box-sizing: border-box;
 }
 .event_work {
